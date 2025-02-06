@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootCart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .product-ad {
+            background-color: rgb(244, 244, 244);
+        }
+        
+        .brand-names li input {
+            cursor: pointer;
+        }
+        
+        .h-350 {
+            height: 350px;
+        }
+        .bold-fit-brand {
+            background-color: rgb(252, 252, 252);
+        }
+        .shop-boldfit {
+            font-size: 13px;
+        }
+        .right-arrow {
+            font-size: 10px;
+        }
+
+        .boldfit-baner {
+            height: 350px;
+        }
+
+        .boldfit-baner img{ 
+           height: 100%;
+           width: 100%;
+           overflow: hidden;   
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- Main Header -->
+        <header >
+            <nav class="d-flex  px-4 align-items-center justify-content-between  text-light gap-4">
+                <div class="logo">
+                    <img src="assets/logo-dark.png" alt="" width="200px">   
+                </div>
+                <div class="location d-flex gap-1 d-none d-xl-flex ">
+                    <div class="logo pt-3 location-icon"> <i class="bi bi-geo-alt"></i></div>
+                    <div class="address ">
+                        <p class="m-0 first">Delivering to Vengara 676304</p>
+                        <p class="p-0 m-0 fw-bold ">Update location</p>
+                    </div>
+                </div>
+                <div class="d-none d-lg-flex col-lg-5 col-xl-7  ">
+                    <button class="border-0 d-flex gap-2 align-items-center px-2 all-btn">
+                        All  <i class="bi bi-caret-down-fill"></i>
+                    </button>
+                    <input class="w-100 py-2 px-2 fs-5" type="text" placeholder="search">
+                    <button class="border-0 px-2 search">
+                        <i class="bi bi-search fs-5 fw-bold"></i>
+                    </button>
+                </div>
+                <div class="nav-end d-none d-lg-flex align-items-end gap-3 ">
+                    <div class="lang ">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="india" width="20px">
+                        <span class="fw-bold">EN</span>
+                    </div>
+                    <div class="signin">
+                        <p class="m-0 first">Hello, sign in</p>
+                        <p class="m-0 fw-bold second">Accounts & Lists</p>
+                    </div>
+                    <div class="orders ">
+                        <p class="m-0 first">Returns</p>
+                        <p class="m-0 fw-bold second">& Orders</p>
+                    </div>
+                    <div class="cart ">
+                        <i class="bi bi-cart"></i>
+                        cart
+                    </div>
+                    
+                </div>
+                <div class="d-flex d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sub Header -->
+        <nav class="second-header d-none d-lg-block">
+            <ul class="d-flex list-unstyled px-4 overflow-auto">
+                <li class="fw-bold" > <i class="fa-solid fa-bars"></i> All</li>
+                <li>MX Player</li>
+                <li>Sell</li>
+                <li>Best Sellers</li>
+                <li>Mobiles</li>
+                <li>Today's Deals</li>
+                <li>Electronics</li>
+                <li>Customer Service</li>
+                <li>Amazon Pay</li>
+                <li>Prime</li>
+                <li>Home & Kitchen</li>
+                <li>New Releases</li>
+                <li>Fashion</li>
+                <li>Computers</li>
+                <li>Car & Motorbike</li>
+                <li>Books</li>
+                <li>Toys & Games</li>
+                <li>Sports, Fitness & Outdoors</li>
+            </ul>
+        </nav>
+
+        <!-- Amazon Home -->
+        <div class="amazon-home d-none d-lg-flex list-unstyled justify-content-around overflow-auto">
+            <h3 class="fs-6">Amazon Home</h3>
+            <li > Kitchen & Home Appliances</li>
+            <li>Large Appliances</li>
+            <li>Kitchen & Dining</li>
+            <li>Furniture</li>
+            <li>Home Furnishing</li>
+            <li>Home Decor</li>
+            <li>Home Improvmenty</li>
+            <li>Garden & Outdoor</li>
+            <li>Storage & Organisation</li>
+            <li>Lighting</li>
+        </div>
+
+    </div>
+
+
+    <!-- mobile -->
+    <div class="list-unstyled d-flex align-items-center overflow-auto py-2 px-2 d-lg-none">
+        <div class="me-2 pe-2 border-end ">
+            <button class="filter-btn rounded-2 px-3 py-1 fw-semibold">Filters</button>
+            <li class="mt-2 py-1">
+                <img src="assets/prime-logo.png" alt="" width="55px">
+            </li>
+        </div>
+        <div class="mobile-content ">
+            <div class=" d-flex ">
+                <li>Today's Deals</li>
+                <li>All Discounts</li>
+                <li>Under ₹500</li>
+                <li>₹500 - ₹1,000</li>
+                <li>₹1,000 - ₹2,000</li>
+                <li>₹2,000 - ₹3,000</li>
+                <li>Over ₹3,000</li>
+                
+            </div>
+
+            <div class="d-flex mt-2">
+                <li>Popular <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>Item Shape <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>Special Features <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>Style <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>New</li>
+                <li>Brands <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>Material <i class="fa-solid fa-chevron-down do "></i></li>
+                <li>Kitchen Top Brands <i class="fa-solid fa-chevron-down do "></i></li>
+            </div>
+        </div>
+    </div>
+        
+
+        <!-- Search Results -->
+        <div class="search-results d-none d-sm-flex justify-content-between px-5 py-2 border shadow-md align-items-center ">
+            <div class="px-2">
+                <p class="m-0 result">1-24 of over 1,000 results for <span class="fw-bold">"water bottles"</span></p>
+            </div>
+            <div class="px-2 sort cursor-pointer d-inline-block">
+                <button class=" border-0">Sort by: Featured <i class="fa fa-angle-down ps-1" aria-hidden="true"></i></button>
+            </div>
+        </div>
+
+        <div class="items-container pt-3">
+
+            <!-- desktop -->
+            <div class="row min-vh-100 ">
+                <div class="col-lg-3 col-xl-2 bg-light px-5 d-none d-lg-block">
+                    <div class="category">
+                        <h6 class="fw-bold m-0">Category</h6>
+                        <div class="list-unstyled mt-1 mb-3">
+                            <li>Water Bottles</li>
+                            <li>Insulated Drinks Containers</li>
+                            <li>Insulated Bottles</li>
+                            <li>Drinks Container Insulations</li>
+                        </div>
+                    </div>
+                    <div class="review list-unstyled">
+                        <h6 class="fw-bold m-0">Customer Review</h6>
+                        <div class="mt-1 mb-3">
+                            <li>
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-outline.png" alt="" width="16px"> & Up
+                            </li>
+                            <li>
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-filled.png" alt="" width="16px"> 
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px"> & Up
+                            </li>
+                            <li>
+                                <img src="assets/star-filled.png" alt="" width="16px">
+                                <img src="assets/star-filled.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px"> & Up
+                            </li>
+                            <li>
+                                <img src="assets/star-filled.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px">
+                                <img src="assets/star-outline.png" alt="" width="16px"> & Up
+                            </li>
+                            
+                        </div>
+                    </div>
+                    <div class="brand list-unstyled">
+                        <h6 class="fw-bold m-0">Brand</h6>
+                        <div class="brand-names mt-1 mb-3">
+                            <li>
+                                <input type="checkbox" > MILTON
+                            </li>
+                            <li>
+                                <input type="checkbox"> CELLO
+                            </li>
+                            <li>
+                                <input type="checkbox"> Boldfit
+                            </li>
+                            <li>
+                                <input type="checkbox"> Borosll
+                            </li>
+                            <li>
+                                <input type="checkbox"> Amazon Brand - 5olimo
+                            </li>
+                            <li>
+                                <input type="checkbox"> Pigeon
+                            </li>
+                            <li>
+                                <input type="checkbox"> Speedex
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-chevron-down do "></i>
+                                <span class="text-primary">See more</span>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <h6 class="fw-bold m-0">Price</h6>
+                        <div class="list-unstyled mt-1 ">
+                            <li>Under ₹500</li>
+                            <li>₹500 - ₹1,000</li>
+                            <li>₹1,000 - ₹2,000</li>
+                            <li>₹2,000 - ₹3,000</li>
+                            <li>Over ₹3,000</li>
+                        </div>
+                        <div class="price-range d-flex mb-1 gap-2 mt-2">
+                            <input type="text" placeholder="₹Min">
+                            <input type="text" placeholder="₹Max">
+                            <Button class="px-2 rounded-3 fw-semibold ">Go</Button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-container col-lg-9 col-xl-10 px-5  ">
+
+                    <div class="bold-fit-brand d-flex gap-4 align-items-center">
+                        <div class="bold-fit-logo border-end pe-3 py-3 " style="width: 230px;">
+                            <img class="w-100" src="assets/bold-fit-logo.png" alt="" >
+                        </div>
+                        <div class="bold-fit-desc">
+                            <h5 class="m-0">Motivational Water Bottle for Sports and Gym</h5>
+                            <li class="list-unstyled shop-boldfit cursor-pointer">
+                                <a href="#" class="text-decoration-none cursor-pointer">Shop Boldfit <i class="fa-solid fa-chevron-right right-arrow "></i></a>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="product-ad h-350 row">
+                        <div class="col-lg-5 boldfit-baner">
+                            <img src="assets/bold-fit-baner.jpg" alt="">
+                        </div>
+                        <div class="col-lg-7
+                        ">hello</div>
+                    </div>
+
+                    <h5>Results</h5>
+                    <h6>no of results</h6> 
+
+                    <div class="product-list bg-warning">product card</div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
