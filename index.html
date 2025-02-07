@@ -18,9 +18,7 @@
             cursor: pointer;
         }
         
-        .h-350 {
-            height: 350px;
-        }
+        
         .bold-fit-brand {
             background-color: rgb(252, 252, 252);
         }
@@ -32,13 +30,58 @@
         }
 
         .boldfit-baner {
-            height: 350px;
+            height: 250px;
         }
 
         .boldfit-baner img{ 
            height: 100%;
            width: 100%;
            overflow: hidden;   
+        }
+
+        @media only screen and (min-width:1300px) {
+            .h-350 {
+                height: 350px;
+            }
+            .boldfit-baner {
+                height: 350px;
+            }
+        }
+       
+        
+        .boldfit-cards .col {
+            width: calc((100% - 24px) / 3);
+        }
+
+        .product-list .card {
+            background-color: green;
+            width: 100%;
+        }  
+        
+        @media only screen and (min-width: 768px) {
+            .product-list .card {
+                width: calc((100% - 8px) / 2);
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .product-list .card {
+                width: calc((100% - 24px) / 4);
+            }
+        }
+
+        .ad-card-img {
+            height: 80%;
+            background-color: rgb(244, 244, 244);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            object-fit: cover;
+        }
+
+        .ad-card-img img {
+            width: 50%;
+            height: 80%;
         }
 
     </style>
@@ -48,18 +91,18 @@
     <div>
         <!-- Main Header -->
         <header >
-            <nav class="d-flex  px-xxl-4 align-items-center justify-content-between  text-light gap-1 gap-xxl-3">
-                <div class="logo">
+            <nav class="d-flex py-1 px-xxl-4 align-items-center justify-content-between justify-content-xl-center  text-light gap-3 ">
+                <div class="logo hover">
                     <img src="assets/logo-dark.png" alt="" width="200px">   
                 </div>
-                <div class="location d-flex gap-1 d-none d-xl-flex ">
+                <div class="location d-flex gap-1 d-none d-xl-flex hover">
                     <div class="logo pt-3 location-icon"> <i class="bi bi-geo-alt"></i></div>
-                    <div class="address text-nowrap">
+                    <div class="address text-nowrap p-1">
                         <p class="m-0 first">Delivering to Vengara 676304</p>
                         <p class="p-0 m-0 fw-medium  ">Update location</p>
                     </div>
                 </div>
-                <div class="d-none d-lg-flex col-lg-5 col-xl-6 col-xxl-7 ">
+                <div class="d-none d-lg-flex col-lg-4 col-xl-5 col-xxl-7  ">
                     <button class="border-0 d-flex gap-2 align-items-center px-2 all-btn">
                         All  <i class="bi bi-caret-down-fill"></i>
                     </button>
@@ -69,19 +112,19 @@
                     </button>
                 </div>
                 <div class="nav-end d-none d-lg-flex align-items-end gap-2 ">
-                    <div class="lang d-flex">
+                    <div class="lang d-flex gap-1 pt-4 px-1 hover">
                         <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="india" width="15px">
-                        <span class="fw-bold">EN</span>
+                        <span class="fw-medium fs-6">EN</span>
                     </div>
-                    <div class="signin">
+                    <div class="signin hover p-1">
                         <p class="m-0 first">Hello, sign in</p>
                         <p class="m-0 fw-medium second text-nowrap">Accounts & Lists</p>
                     </div>
-                    <div class="orders text-nowrap ">
+                    <div class="orders text-nowrap hover p-1">
                         <p class="m-0 first">Returns</p>
                         <p class="m-0 fw-medium second">& Orders</p>
                     </div>
-                    <div class="cart ">
+                    <div class="carthover hover px-1 pt-3 d-flex">
                         <i class="bi bi-cart"></i>
                         cart
                     </div>
@@ -95,7 +138,7 @@
 
         <!-- Sub Header -->
         <nav class="second-header d-none d-lg-block text-nowrap">
-            <ul class="d-flex list-unstyled px-4 overflow-auto">
+            <ul class="d-flex list-unstyled px-4 overflow-auto hide-scrollbar">
                 <li class="fw-bold" > <i class="fa-solid fa-bars"></i> All</li>
                 <li>MX Player</li>
                 <li>Sell</li>
@@ -118,7 +161,7 @@
         </nav>
 
         <!-- Amazon Home -->
-        <div class="amazon-home d-none d-lg-flex list-unstyled justify-content-around overflow-auto text-nowrap gap-2 px-2 ">
+        <div class="amazon-home d-none d-lg-flex list-unstyled justify-content-around overflow-auto text-nowrap gap-2 px-2 hide-scrollbar">
             <h3 class="fs-6">Amazon Home</h3>
             <li > Kitchen & Home Appliances</li>
             <li>Large Appliances</li>
@@ -275,10 +318,10 @@
                     </div>
                 </div>
 
-                <div class="product-container col-lg-9 col-xl-10 px-5  ">
+                <div class="product-container col-lg-9 col-xl-10 px-5 m-0 p-0 ">
 
                     <div class="bold-fit-brand d-flex gap-4 align-items-center">
-                        <div class="bold-fit-logo border-end pe-3 py-3 " style="width: 230px;">
+                        <div class="bold-fit-logo border-end pe-3 py-3" style="width: 230px;">
                             <img class="w-100" src="assets/bold-fit-logo.png" alt="" >
                         </div>
                         <div class="bold-fit-desc">
@@ -289,18 +332,104 @@
                         </div>
                     </div>
 
-                    <div class="product-ad h-350 row">
-                        <div class="col-lg-5 boldfit-baner">
+                    <div class="row">
+                        <div class="col-md-5 boldfit-baner p-0">
                             <img src="assets/bold-fit-baner.jpg" alt="">
                         </div>
-                        <div class="col-lg-7
-                        ">hello</div>
+                        <div class="product-ad col-md-7 d-flex gap-2 py-2  boldfit-cards p-0">
+                            <div class="col">
+                                <div class="card" style=" height: 100%;">
+                                     <div class="ad-card-img w-100">
+                                        <img src="assets/products/ad-1.png" class="card-img-top " alt="..." > 
+                                     </div>
+                                    <div class="card-body p-0 pb-2">
+                                      <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                      <li class="list-unstyled ">
+                                        <img src="assets/star-filled.png" alt="" width="16px"> 
+                                        <img src="assets/star-filled.png" alt="" width="16px"> 
+                                        <img src="assets/star-filled.png" alt="" width="16px"> 
+                                        <img src="assets/star-filled.png" alt="" width="16px"> 
+                                        <img src="assets/half-filled.png" alt="" width="16px"> <span>624</span>
+                                        </li>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style=" height: 100%;">
+                                    <div class="ad-card-img w-100">
+                                        <img src="assets/products/ad-2.png" class="card-img-top " alt="..." > 
+                                     </div>
+                                    <div class="card-body p-0 pb-2">
+                                        <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                        <li class="list-unstyled ">
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/half-filled.png" alt="" width="16px"> <span>624</span>
+                                          </li>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col">
+                                <div class="card" style=" height: 100%;">
+                                    <div class="ad-card-img w-100">
+                                        <img src="assets/products/ad-3.png" class="card-img-top " alt="..." > 
+                                    </div>                                   
+                                    <div class="card-body p-0 pb-2">
+                                        <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                        <li class="list-unstyled ">
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/star-filled.png" alt="" width="16px"> 
+                                          <img src="assets/half-filled.png" alt="" width="16px"> <span>624</span>
+                                        </li>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <h5>Results</h5>
-                    <h6>no of results</h6> 
+                    <h5 class="fw-bold m-0 p-0 mt-4 ">Results</h5>
+                    <p class="m-0 p-0">Check each product page for other buying options. Price and other details may vary based on product size and colour.</p> 
 
-                    <div class="product-list bg-warning">product card</div>
+                    <div class="container-fluid ">
+                        <div class="product-list bg-warning row gap-2">
+                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%; ">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+    
+                            <div class="card col-12 col-md-6 col-lg-3  p-0" style=" height: 100%; ">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+    
+                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%; ">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+    
+                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%;">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                  <h5 class="card-title">Card title</h5>
+                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
