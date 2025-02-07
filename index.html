@@ -10,80 +10,75 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        .product-ad {
+        .product-list .card {
+            width: 100%;
+            cursor: pointer;
+        }  
+
+        .product-list .result-product {
+            width: 100%;
+            height: 350px;
+            padding-top: 15px;
             background-color: rgb(244, 244, 244);
         }
-        
-        .brand-names li input {
-            cursor: pointer;
-        }
-        
-        
-        .bold-fit-brand {
-            background-color: rgb(252, 252, 252);
-        }
-        .shop-boldfit {
-            font-size: 13px;
-        }
-        .right-arrow {
-            font-size: 10px;
-        }
 
-        .boldfit-baner {
-            height: 250px;
-        }
-
-        .boldfit-baner img{ 
-           height: 100%;
-           width: 100%;
-           overflow: hidden;   
-        }
-
-        @media only screen and (min-width:1300px) {
-            .h-350 {
-                height: 350px;
-            }
-            .boldfit-baner {
-                height: 350px;
-            }
-        }
-       
-        
-        .boldfit-cards .col {
-            width: calc((100% - 24px) / 3);
-        }
-
-        .product-list .card {
-            background-color: green;
+        .product-list .result-product img {
             width: 100%;
-        }  
+            height: 100%;
+            object-fit: contain;
+        }
         
+        .search-product-desc {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+        }
+
         @media only screen and (min-width: 768px) {
             .product-list .card {
                 width: calc((100% - 8px) / 2);
             }
         }
-
+        
         @media only screen and (min-width: 992px) {
             .product-list .card {
-                width: calc((100% - 24px) / 4);
+                width: calc((100% - 40px) / 5);
             }
         }
 
-        .ad-card-img {
-            height: 80%;
-            background-color: rgb(244, 244, 244);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            object-fit: cover;
+        .a-price-symbol {
+            position: absolute;
+            left: 4px;
+            top: 0px;
         }
 
-        .ad-card-img img {
-            width: 50%;
-            height: 80%;
+        .fs-xxl-1 {
+            font-size: 20px;
         }
 
+        .product-price {
+            font-size: 10px;
+        }
+
+        @media (min-width: 1400px) {
+            .fs-xxl-1 {
+                font-size: 2rem; 
+            }
+            .a-price-symbol {
+                position: absolute;
+                left: 4px;
+                top: 4px;
+            }
+            .product-price {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+        
+        
     </style>
 </head>
 
@@ -224,8 +219,9 @@
 
         <div class="items-container pt-3">
 
-            <!-- desktop -->
-            <div class="row min-vh-100 ">
+            <div class="row p-0 m-0">
+
+                <!-- desktop -->
                 <div class="col-lg-3 col-xl-2 bg-light px-5 d-none d-lg-block">
                     <div class="category">
                         <h6 class="fw-bold m-0">Category</h6>
@@ -332,7 +328,9 @@
                         </div>
                     </div>
 
-                    <div class="row">
+        
+                    <!-- Ad Container -->
+                    <div class="row m-0 p-0">
                         <div class="col-md-5 boldfit-baner p-0">
                             <img src="assets/bold-fit-baner.jpg" alt="">
                         </div>
@@ -343,7 +341,7 @@
                                         <img src="assets/products/ad-1.png" class="card-img-top " alt="..." > 
                                      </div>
                                     <div class="card-body p-0 pb-2">
-                                      <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                      <h6 class=" m-0 p-0 limited-text-alt">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
                                       <li class="list-unstyled ">
                                         <img src="assets/star-filled.png" alt="" width="16px"> 
                                         <img src="assets/star-filled.png" alt="" width="16px"> 
@@ -360,7 +358,7 @@
                                         <img src="assets/products/ad-2.png" class="card-img-top " alt="..." > 
                                      </div>
                                     <div class="card-body p-0 pb-2">
-                                        <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                        <h6 class=" m-0 p-0 limited-text-alt">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
                                         <li class="list-unstyled ">
                                           <img src="assets/star-filled.png" alt="" width="16px"> 
                                           <img src="assets/star-filled.png" alt="" width="16px"> 
@@ -377,7 +375,7 @@
                                         <img src="assets/products/ad-3.png" class="card-img-top " alt="..." > 
                                     </div>                                   
                                     <div class="card-body p-0 pb-2">
-                                        <h6 class=" m-0 p-0">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
+                                        <h6 class=" m-0 p-0 limited-text-alt">Boldfit Water Bottles 1 Litre Sipper Bottle For Adults, Kids</h6>
                                         <li class="list-unstyled ">
                                           <img src="assets/star-filled.png" alt="" width="16px"> 
                                           <img src="assets/star-filled.png" alt="" width="16px"> 
@@ -392,40 +390,182 @@
                         </div>
                     </div>
 
+                    <!-- Results subhead -->
                     <h5 class="fw-bold m-0 p-0 mt-4 ">Results</h5>
-                    <p class="m-0 p-0">Check each product page for other buying options. Price and other details may vary based on product size and colour.</p> 
+                    <p class="m-0 p-0 ">Check each product page for other buying options. Price and other details may vary based on product size and colour.</p> 
 
-                    <div class="container-fluid ">
-                        <div class="product-list bg-warning row gap-2">
-                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%; ">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <!-- Results product list -->
+                    <div class="container-fluid pb-5 mt-3">
+                        <div class="product-list row gap-2">
+                            <div class="card col-12 col-md-6 col-lg-3 p-0 border" style=" height: 100%; ">
+                                <div class="result-product w-100 ">
+                                    <img src="assets/products/search-product-1.png" class="card-img-top" alt="...">
+                                </div>
+                                
+                                <div class="card-body ">
+                                  <h6 class="card-title search-product-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+
+                                  <li class="list-unstyled ">
+                                    <img src="assets/star-filled.png" alt="" width="16px"> 
+                                    <img src="assets/star-filled.png" alt="" width="16px"> 
+                                    <img src="assets/star-filled.png" alt="" width="16px"> 
+                                    <img src="assets/star-filled.png" alt="" width="16px"> 
+                                    <img src="assets/star-outline.png" alt="" width="16px"> 
+                                    <i class="fa-solid fa-chevron-down do "></i>
+                                    <span>624</span>
+                                  </li>
+
+                                  <li class="list-unstyled text-secondary fw-medium">100+ bought in past month</li>
+
+                                  <h4 class="fs-xxl-1 fw-medium position-relative ps-3 text-nowrap">
+                                    <span class="fs-5 fw-normal a-price-symbol">₹</span>
+                                    399 
+                                    <span class=" text-secondary product-price ">M.R.P: <s>₹495</s></span>
+                                    <span class=" product-price">(19% off)</span>
+                                  </h4>
+
+                                  <li class="list-unstyled text-nowrap product-price">
+                                    Delivery <b>Wed, 12 Feb</b>
+                                  </li>
+
+                                  <button class="bg-warning border rounded-5 px-3 py-1 mt-2">Add to cart</button>
                                 </div>
                             </div>
     
-                            <div class="card col-12 col-md-6 col-lg-3  p-0" style=" height: 100%; ">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card col-12 col-md-6 col-lg-3 p-0 border" style=" height: 100%; ">
+                                <div class="result-product w-100 ">
+                                    <img src="assets/products/search-product-2.png" class="card-img-top" alt="...">
+                                </div>
+
+                                <div class="card-body ">
+                                    <h6 class="card-title search-product-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+  
+                                    <li class="list-unstyled ">
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-outline.png" alt="" width="16px"> 
+                                      <i class="fa-solid fa-chevron-down do "></i>
+                                      <span>624</span>
+                                    </li>
+  
+                                    <li class="list-unstyled text-secondary fw-medium">100+ bought in past month</li>
+  
+                                    <h4 class="fs-xxl-1 fw-medium position-relative ps-3 text-nowrap">
+                                      <span class="fs-5 fw-normal a-price-symbol">₹</span>
+                                      399 
+                                      <span class=" text-secondary product-price ">M.R.P: <s>₹495</s></span>
+                                      <span class=" product-price">(19% off)</span>
+                                    </h4>
+  
+                                    <li class="list-unstyled text-nowrap product-price">
+                                      Delivery <b>Wed, 12 Feb</b>
+                                    </li>
+  
+                                    <button class="bg-warning border rounded-5 px-3 py-1 mt-2">Add to cart</button>
                                 </div>
                             </div>
     
-                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%; ">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card col-12 col-md-6 col-lg-3 p-0 border" style=" height: 100%; ">
+                                <div class="result-product w-100 ">
+                                    <img src="assets/products/search-product-3.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body ">
+                                    <h6 class="card-title search-product-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+  
+                                    <li class="list-unstyled ">
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-outline.png" alt="" width="16px"> 
+                                      <i class="fa-solid fa-chevron-down do "></i>
+                                      <span>624</span>
+                                    </li>
+  
+                                    <li class="list-unstyled text-secondary fw-medium">100+ bought in past month</li>
+  
+                                    <h4 class="fs-xxl-1 fw-medium position-relative ps-3 text-nowrap">
+                                      <span class="fs-5 fw-normal a-price-symbol">₹</span>
+                                      399 
+                                      <span class=" text-secondary product-price ">M.R.P: <s>₹495</s></span>
+                                      <span class=" product-price">(19% off)</span>
+                                    </h4>
+  
+                                    <li class="list-unstyled text-nowrap product-price">
+                                      Delivery <b>Wed, 12 Feb</b>
+                                    </li>
+  
+                                    <button class="bg-warning border rounded-5 px-3 py-1 mt-2">Add to cart</button>
                                 </div>
                             </div>
     
-                            <div class="card col-12 col-md-6 col-lg-3 p-0" style=" height: 100%;">
-                                <img src="..." class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <div class="card col-12 col-md-6 col-lg-3 p-0 border" style=" height: 100%;">
+                                <div class="result-product w-100 ">
+                                    <img src="assets/products/search-product-4.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body ">
+                                    <h6 class="card-title search-product-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+  
+                                    <li class="list-unstyled ">
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-outline.png" alt="" width="16px"> 
+                                      <i class="fa-solid fa-chevron-down do "></i>
+                                      <span>624</span>
+                                    </li>
+  
+                                    <li class="list-unstyled text-secondary fw-medium">100+ bought in past month</li>
+  
+                                    <h4 class="fs-xxl-1 fw-medium position-relative ps-3 text-nowrap">
+                                      <span class="fs-5 fw-normal a-price-symbol">₹</span>
+                                      399 
+                                      <span class=" text-secondary product-price ">M.R.P: <s>₹495</s></span>
+                                      <span class=" product-price">(19% off)</span>
+                                    </h4>
+  
+                                    <li class="list-unstyled text-nowrap product-price">
+                                      Delivery <b>Wed, 12 Feb</b>
+                                    </li>
+  
+                                    <button class="bg-warning border rounded-5 px-3 py-1 mt-2">Add to cart</button>
+                                </div>
+                            </div>
+
+                            <div class="card col-12 col-md-6 col-lg-3 p-0 border " style=" height: 100%;">
+                                <div class="result-product w-100 ">
+                                    <img src="assets/products/search-product-1.png" class="card-img-top" alt="...">
+                                </div>
+                                <div class="card-body ">
+                                    <h6 class="card-title search-product-desc">Some quick example text to build on the card title and make up the bulk of the card's content.</h6>
+  
+                                    <li class="list-unstyled ">
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-filled.png" alt="" width="16px"> 
+                                      <img src="assets/star-outline.png" alt="" width="16px"> 
+                                      <i class="fa-solid fa-chevron-down do "></i>
+                                      <span>624</span>
+                                    </li>
+  
+                                    <li class="list-unstyled text-secondary fw-medium">100+ bought in past month</li>
+  
+                                    <h4 class="fs-xxl-1 fw-medium position-relative ps-3 text-nowrap">
+                                      <span class="fs-5 fw-normal a-price-symbol">₹</span>
+                                      399 
+                                      <span class=" text-secondary product-price ">M.R.P: <s>₹495</s></span>
+                                      <span class=" product-price">(19% off)</span>
+                                    </h4>
+  
+                                    <li class="list-unstyled text-nowrap product-price">
+                                      Delivery <b>Wed, 12 Feb</b>
+                                    </li>
+  
+                                    <button class="bg-warning border rounded-5 px-3 py-1 mt-2">Add to cart</button>
                                 </div>
                             </div>
                         </div>
